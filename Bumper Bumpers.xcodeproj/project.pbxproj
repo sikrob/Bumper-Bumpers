@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E1DE636E2248319A00084717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE636D2248319A00084717 /* AppDelegate.swift */; };
-		E1DE63702248319A00084717 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1DE636F2248319A00084717 /* GameScene.sks */; };
 		E1DE63722248319A00084717 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1DE63712248319A00084717 /* Actions.sks */; };
-		E1DE63742248319A00084717 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE63732248319A00084717 /* GameScene.swift */; };
 		E1DE63762248319A00084717 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE63752248319A00084717 /* ViewController.swift */; };
 		E1DE63782248319D00084717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DE63772248319D00084717 /* Assets.xcassets */; };
 		E1DE637B2248319D00084717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DE63792248319D00084717 /* Main.storyboard */; };
@@ -19,9 +17,7 @@
 /* Begin PBXFileReference section */
 		E1DE636A2248319A00084717 /* Bumper Bumpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bumper Bumpers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DE636D2248319A00084717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1DE636F2248319A00084717 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		E1DE63712248319A00084717 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		E1DE63732248319A00084717 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E1DE63752248319A00084717 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1DE63772248319D00084717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1DE637A2248319D00084717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,12 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				E1DE636D2248319A00084717 /* AppDelegate.swift */,
-				E1DE636F2248319A00084717 /* GameScene.sks */,
-				E1DE63712248319A00084717 /* Actions.sks */,
-				E1DE63732248319A00084717 /* GameScene.swift */,
-				E1DE63752248319A00084717 /* ViewController.swift */,
-				E1DE63772248319D00084717 /* Assets.xcassets */,
 				E1DE63792248319D00084717 /* Main.storyboard */,
+				E1DE63752248319A00084717 /* ViewController.swift */,
+				E1DE63712248319A00084717 /* Actions.sks */,
+				E1DE63772248319D00084717 /* Assets.xcassets */,
 				E1DE637C2248319D00084717 /* Info.plist */,
 				E1DE637D2248319D00084717 /* Bumper_Bumpers.entitlements */,
 			);
@@ -130,7 +124,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DE63702248319A00084717 /* GameScene.sks in Resources */,
 				E1DE63782248319D00084717 /* Assets.xcassets in Resources */,
 				E1DE63722248319A00084717 /* Actions.sks in Resources */,
 				E1DE637B2248319D00084717 /* Main.storyboard in Resources */,
@@ -145,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DE63762248319A00084717 /* ViewController.swift in Sources */,
-				E1DE63742248319A00084717 /* GameScene.swift in Sources */,
 				E1DE636E2248319A00084717 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
