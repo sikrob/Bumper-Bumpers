@@ -1,5 +1,5 @@
 //
-//  GameLoadingState.swift
+//  MainMenuState.swift
 //  Bumper Bumpers
 //
 //  Created by Robert Sikorski on 3/24/19.
@@ -8,9 +8,9 @@
 
 import GameplayKit
 
-class GameLoadingState: GKState {
+class MainMenuState: GKState {
   override func didEnter(from previousState: GKState?) {
-    if let scene = GKScene(fileNamed: "GameLoadingScene"), let sceneNode = scene.rootNode as? GameLoadingScene {
+    if let scene = GKScene(fileNamed: "MainMenuScene"), let sceneNode = scene.rootNode as? MainMenuScene {
       if let gameStateMachine = stateMachine as! GameStateMachine? {
         sceneNode.state = self
         gameStateMachine.gameViewController.skView.presentScene(sceneNode)
@@ -18,9 +18,11 @@ class GameLoadingState: GKState {
     }
   }
 
-  func enterMenuState() {
+  // to eventually replace with at least PlayIntroState
+  func enterPlayRunningState() {
+    print("enter that play running state")
     if let gameStateMachine = stateMachine as! GameStateMachine? {
-      gameStateMachine.enter(MainMenuState.self)
+      gameStateMachine.exitGame() // .enter next state
     }
   }
 }

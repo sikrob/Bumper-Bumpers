@@ -20,8 +20,7 @@ class GameStateMachine: GKStateMachine {
     var gameStates: [GKState] = []
 
     gameStates.append(GameLoadingState())
-
-    // main menu running state
+    gameStates.append(MainMenuState())
     // play loading state
     // play intro state
     // play running state
