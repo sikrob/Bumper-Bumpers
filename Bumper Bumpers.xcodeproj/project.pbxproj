@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1072249B6D3007FFC5C /* ClickableComponent.swift */; };
+		E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */; };
+		E173F10D2249BB76007FFC5C /* ClickMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F10C2249BB76007FFC5C /* ClickMode.swift */; };
 		E1CC4B08224879C5003C7469 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1CC4B07224879C5003C7469 /* MainMenuScene.sks */; };
 		E1CC4B0A224879CF003C7469 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC4B09224879CF003C7469 /* MainMenuScene.swift */; };
 		E1CC4B0D22487AEF003C7469 /* MainMenuState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC4B0C22487AEF003C7469 /* MainMenuState.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E173F1072249B6D3007FFC5C /* ClickableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableComponent.swift; sourceTree = "<group>"; };
+		E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem.swift; sourceTree = "<group>"; };
+		E173F10C2249BB76007FFC5C /* ClickMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickMode.swift; sourceTree = "<group>"; };
 		E1CC4B07224879C5003C7469 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
 		E1CC4B09224879CF003C7469 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		E1CC4B0C22487AEF003C7469 /* MainMenuState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuState.swift; sourceTree = "<group>"; };
@@ -53,6 +59,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E173F1052249B695007FFC5C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E173F1072249B6D3007FFC5C /* ClickableComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E173F1062249B6A0007FFC5C /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */,
+			);
+			path = Systems;
+			sourceTree = "<group>";
+		};
+		E173F10B2249BB48007FFC5C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E173F10C2249BB76007FFC5C /* ClickMode.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		E1CC4B0B22487A87003C7469 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +127,9 @@
 				E1DE6385224838ED00084717 /* GameStateMachine.swift */,
 				E1DE638722483BC000084717 /* GameStates */,
 				E1DE638A22483C6800084717 /* Scenes */,
+				E173F1062249B6A0007FFC5C /* Systems */,
+				E173F1052249B695007FFC5C /* Components */,
+				E173F10B2249BB48007FFC5C /* Enums */,
 				E1DE63772248319D00084717 /* Assets.xcassets */,
 				E1DE637C2248319D00084717 /* Info.plist */,
 				E1DE637D2248319D00084717 /* Bumper_Bumpers.entitlements */,
@@ -197,13 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E173F10D2249BB76007FFC5C /* ClickMode.swift in Sources */,
 				E1DE63762248319A00084717 /* ViewController.swift in Sources */,
 				E1CC4B0D22487AEF003C7469 /* MainMenuState.swift in Sources */,
 				E1DE638922483BDB00084717 /* GameLoadingState.swift in Sources */,
 				E1DE6384224837F500084717 /* GameController.swift in Sources */,
 				E1DE638E22483CAE00084717 /* GameLoadingScene.swift in Sources */,
 				E1DE636E2248319A00084717 /* AppDelegate.swift in Sources */,
+				E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */,
 				E1CC4B0A224879CF003C7469 /* MainMenuScene.swift in Sources */,
+				E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */,
 				E1DE6386224838ED00084717 /* GameStateMachine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
