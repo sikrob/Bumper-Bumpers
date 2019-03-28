@@ -10,6 +10,9 @@
 		E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1072249B6D3007FFC5C /* ClickableComponent.swift */; };
 		E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */; };
 		E173F10D2249BB76007FFC5C /* ClickMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F10C2249BB76007FFC5C /* ClickMode.swift */; };
+		E1A7657B224C6ABB0019D5AB /* PlayRunningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7657A224C6ABB0019D5AB /* PlayRunningState.swift */; };
+		E1A7657D224C6B390019D5AB /* PlayRunningScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1A7657C224C6B390019D5AB /* PlayRunningScene.sks */; };
+		E1A7657F224C6B4D0019D5AB /* PlayRunningScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7657E224C6B4D0019D5AB /* PlayRunningScene.swift */; };
 		E1CC4B08224879C5003C7469 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1CC4B07224879C5003C7469 /* MainMenuScene.sks */; };
 		E1CC4B0A224879CF003C7469 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC4B09224879CF003C7469 /* MainMenuScene.swift */; };
 		E1CC4B0D22487AEF003C7469 /* MainMenuState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC4B0C22487AEF003C7469 /* MainMenuState.swift */; };
@@ -29,6 +32,9 @@
 		E173F1072249B6D3007FFC5C /* ClickableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableComponent.swift; sourceTree = "<group>"; };
 		E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem.swift; sourceTree = "<group>"; };
 		E173F10C2249BB76007FFC5C /* ClickMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickMode.swift; sourceTree = "<group>"; };
+		E1A7657A224C6ABB0019D5AB /* PlayRunningState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRunningState.swift; sourceTree = "<group>"; };
+		E1A7657C224C6B390019D5AB /* PlayRunningScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayRunningScene.sks; sourceTree = "<group>"; };
+		E1A7657E224C6B4D0019D5AB /* PlayRunningScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRunningScene.swift; sourceTree = "<group>"; };
 		E1CC4B07224879C5003C7469 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
 		E1CC4B09224879CF003C7469 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		E1CC4B0C22487AEF003C7469 /* MainMenuState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuState.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 			children = (
 				E1DE638822483BDB00084717 /* GameLoadingState.swift */,
 				E1CC4B0C22487AEF003C7469 /* MainMenuState.swift */,
+				E1A7657A224C6ABB0019D5AB /* PlayRunningState.swift */,
 			);
 			path = GameStates;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 				E1DE638D22483CAE00084717 /* GameLoadingScene.swift */,
 				E1CC4B07224879C5003C7469 /* MainMenuScene.sks */,
 				E1CC4B09224879CF003C7469 /* MainMenuScene.swift */,
+				E1A7657C224C6B390019D5AB /* PlayRunningScene.sks */,
+				E1A7657E224C6B4D0019D5AB /* PlayRunningScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DE63782248319D00084717 /* Assets.xcassets in Resources */,
+				E1A7657D224C6B390019D5AB /* PlayRunningScene.sks in Resources */,
 				E1DE638C22483C9400084717 /* GameLoadingScene.sks in Resources */,
 				E1DE63722248319A00084717 /* Actions.sks in Resources */,
 				E1DE637B2248319D00084717 /* Main.storyboard in Resources */,
@@ -240,6 +250,8 @@
 				E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */,
 				E1CC4B0A224879CF003C7469 /* MainMenuScene.swift in Sources */,
 				E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */,
+				E1A7657F224C6B4D0019D5AB /* PlayRunningScene.swift in Sources */,
+				E1A7657B224C6ABB0019D5AB /* PlayRunningState.swift in Sources */,
 				E1DE6386224838ED00084717 /* GameStateMachine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

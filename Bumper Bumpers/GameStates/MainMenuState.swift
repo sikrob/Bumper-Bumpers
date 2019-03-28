@@ -22,7 +22,7 @@ class MainMenuState: GKState {
   func enterPlayRunningState() {
     print("enter that play running state")
     if let gameStateMachine = stateMachine as! GameStateMachine? {
-      gameStateMachine.exitGame() // .enter next state
+      gameStateMachine.enter(PlayRunningState.self)
     }
   }
 }

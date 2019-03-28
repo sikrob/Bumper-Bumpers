@@ -23,7 +23,7 @@ class GameStateMachine: GKStateMachine {
     gameStates.append(MainMenuState())
     // play loading state
     // play intro state
-    // play running state
+    gameStates.append(PlayRunningState())
 
     super.init(states: gameStates)
   }

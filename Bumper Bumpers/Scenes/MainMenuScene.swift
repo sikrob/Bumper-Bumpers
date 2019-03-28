@@ -32,7 +32,7 @@ class MainMenuScene: SKScene {
         if clickableComponent.clickableNode.name != nil &&
           clickableComponent.clickableNode.name == "StartLabel" &&
           clickableComponent.clicking {
-          print("go to playstate!")
+          state!.enterPlayRunningState()
         }
       }
     }
