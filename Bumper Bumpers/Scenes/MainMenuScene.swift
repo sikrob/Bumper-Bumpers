@@ -38,16 +38,26 @@ class MainMenuScene: SKScene {
     }
   }
 
-  override func sceneDidLoad() {
-    self.scaleMode = .aspectFill
+  func initializeUiNodes() {
     mainLogoSprite = self.childNode(withName: "MainLogoSprite") as! SKSpriteNode?
     mainLogoSprite?.alpha = 0
     startLabel = self.childNode(withName: "StartLabel") as! SKLabelNode?
     startLabel?.alpha = 0
+  }
 
-    let startLabelEntity = GKEntity()
-    startLabelEntity.addComponent(ClickableComponent(withClickableNode: startLabel!, clickMode: .mouseUp))
-    entities.append(startLabelEntity)
+  func initializeClickables() {
+    if let startLabelNode = startLabel {
+      let startLabelEntity = GKEntity()
+      startLabelEntity.addComponent(ClickableComponent(withClickableNode: startLabelNode, clickMode: .mouseUp))
+      entities.append(startLabelEntity)
+    }
+  }
+
+  override func sceneDidLoad() {
+    self.scaleMode = .aspectFill
+
+    initializeUiNodes()
+    initializeClickables()
 
     for entity in entities {
       clickCheckSystem.addComponent(foundIn: entity)
