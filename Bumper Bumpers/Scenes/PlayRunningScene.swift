@@ -19,8 +19,10 @@ class PlayRunningScene: SKScene {
     self.scaleMode = .aspectFill
 
     let arena = ArenaFactory.createArena()
+    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue)
+    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green)
 
-    self.entities.append(contentsOf: [arena])
+    self.entities.append(contentsOf: [arena, player1, player2])
 
     for entity in entities {
       visibleShapeSystem.addComponent(foundIn: entity)
