@@ -12,6 +12,7 @@ import GameplayKit
 class PlayRunningScene: SKScene {
   var state: PlayRunningState?
   var entities: [GKEntity] = []
+  var activeKeys: Array<UInt16> = []
 
   private let visibleShapeSystem: VisibleShapeSystem = VisibleShapeSystem()
 
@@ -30,6 +31,18 @@ class PlayRunningScene: SKScene {
 
     for shapeNode in visibleShapeSystem.allShapeNodes() {
       self.addChild(shapeNode)
+    }
+  }
+
+  override func keyDown(with event: NSEvent) {
+    if !activeKeys.contains(event.keyCode) {
+      activeKeys.append(event.keyCode)
+    }
+  }
+
+  override func keyUp(with event: NSEvent) {
+    if activeKeys.contains(event.keyCode) {
+      activeKeys.remove(at: activeKeys.firstIndex(of: event.keyCode)!)
     }
   }
 }
