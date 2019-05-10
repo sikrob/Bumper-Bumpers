@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E12ACA6C22851AE8001436A1 /* InputActionActiveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12ACA6B22851AE8001436A1 /* InputActionActiveComponent.swift */; };
 		E154EAF0224FEEE4004377B1 /* VisibleShapeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154EAEF224FEEE4004377B1 /* VisibleShapeComponent.swift */; };
 		E154EAF2224FEF71004377B1 /* VisibleShapeSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154EAF1224FEF71004377B1 /* VisibleShapeSystem.swift */; };
 		E154EAF5224FF2EF004377B1 /* ArenaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154EAF4224FF2EF004377B1 /* ArenaFactory.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E12ACA6B22851AE8001436A1 /* InputActionActiveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputActionActiveComponent.swift; sourceTree = "<group>"; };
 		E154EAEF224FEEE4004377B1 /* VisibleShapeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleShapeComponent.swift; sourceTree = "<group>"; };
 		E154EAF1224FEF71004377B1 /* VisibleShapeSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleShapeSystem.swift; sourceTree = "<group>"; };
 		E154EAF4224FF2EF004377B1 /* ArenaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenaFactory.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				E173F1072249B6D3007FFC5C /* ClickableComponent.swift */,
 				E154EAEF224FEEE4004377B1 /* VisibleShapeComponent.swift */,
+				E12ACA6B22851AE8001436A1 /* InputActionActiveComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				E1A7657F224C6B4D0019D5AB /* PlayRunningScene.swift in Sources */,
 				E1A7657B224C6ABB0019D5AB /* PlayRunningState.swift in Sources */,
 				E1DE6386224838ED00084717 /* GameStateMachine.swift in Sources */,
+				E12ACA6C22851AE8001436A1 /* InputActionActiveComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
