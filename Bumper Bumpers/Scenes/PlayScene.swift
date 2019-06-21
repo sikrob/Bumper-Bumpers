@@ -1,5 +1,5 @@
 //
-//  PlayRunningScene.swift
+//  PlayScene.swift
 //  Bumper Bumpers
 //
 //  Created by Robert Sikorski on 3/27/19.
@@ -9,8 +9,8 @@
 import SpriteKit
 import GameplayKit
 
-class PlayRunningScene: SKScene {
-  var state: PlayRunningState?
+class PlayScene: SKScene {
+  var state: PlayState?
   var entities: [GKEntity] = []
   var activeKeys: Array<UInt16> = []
 
@@ -21,6 +21,7 @@ class PlayRunningScene: SKScene {
 
     let arena = ArenaFactory.createArena()
 
+    // Ideally get these from user preferences:
     let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"]
     let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"]
 

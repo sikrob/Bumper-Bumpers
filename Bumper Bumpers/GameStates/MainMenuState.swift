@@ -19,9 +19,9 @@ class MainMenuState: GKState {
   }
 
   // to eventually replace with at least PlayIntroState
-  func enterPlayRunningState() {
+  func enterPlayState() {
     if let gameStateMachine = stateMachine as! GameStateMachine? {
-      gameStateMachine.enter(PlayRunningState.self)
+      gameStateMachine.enter(PlayState.self)
     }
   }
 }
