@@ -20,8 +20,12 @@ class PlayRunningScene: SKScene {
     self.scaleMode = .aspectFill
 
     let arena = ArenaFactory.createArena()
-    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue)
-    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green)
+
+    let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"]
+    let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"]
+
+    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary)
+    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary)
 
     self.entities.append(contentsOf: [arena, player1, player2])
 
@@ -35,6 +39,8 @@ class PlayRunningScene: SKScene {
   }
 
   override func keyDown(with event: NSEvent) {
+    print(event.keyCode)
+
     if !activeKeys.contains(event.keyCode) {
       activeKeys.append(event.keyCode)
     }

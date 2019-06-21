@@ -21,6 +21,7 @@
 		E1CC4B08224879C5003C7469 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1CC4B07224879C5003C7469 /* MainMenuScene.sks */; };
 		E1CC4B0A224879CF003C7469 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC4B09224879CF003C7469 /* MainMenuScene.swift */; };
 		E1CC4B0D22487AEF003C7469 /* MainMenuState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC4B0C22487AEF003C7469 /* MainMenuState.swift */; };
+		E1D708EF22BB2ECB0062CE8A /* MainLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E1D708EE22BB2ECB0062CE8A /* MainLogo.png */; };
 		E1DE636E2248319A00084717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE636D2248319A00084717 /* AppDelegate.swift */; };
 		E1DE63722248319A00084717 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1DE63712248319A00084717 /* Actions.sks */; };
 		E1DE63762248319A00084717 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE63752248319A00084717 /* ViewController.swift */; };
@@ -48,7 +49,7 @@
 		E1CC4B07224879C5003C7469 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
 		E1CC4B09224879CF003C7469 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		E1CC4B0C22487AEF003C7469 /* MainMenuState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuState.swift; sourceTree = "<group>"; };
-		E1CC4B0F22487FD4003C7469 /* MainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogo.png; sourceTree = "<group>"; };
+		E1D708EE22BB2ECB0062CE8A /* MainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogo.png; sourceTree = "<group>"; };
 		E1DE636A2248319A00084717 /* Bumper Bumpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bumper Bumpers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DE636D2248319A00084717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1DE63712248319A00084717 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -122,7 +123,7 @@
 		E1CC4B0E22487FC1003C7469 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E1CC4B0F22487FD4003C7469 /* MainLogo.png */,
+				E1D708EE22BB2ECB0062CE8A /* MainLogo.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -249,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DE63782248319D00084717 /* Assets.xcassets in Resources */,
+				E1D708EF22BB2ECB0062CE8A /* MainLogo.png in Resources */,
 				E1A7657D224C6B390019D5AB /* PlayRunningScene.sks in Resources */,
 				E1DE638C22483C9400084717 /* GameLoadingScene.sks in Resources */,
 				E1DE63722248319A00084717 /* Actions.sks in Resources */,

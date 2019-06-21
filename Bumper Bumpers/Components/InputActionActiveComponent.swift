@@ -29,9 +29,17 @@ class InputActionActiveComponent: GKComponent {
     fatalError("init(coder:) has not been implemented")
   }
 
-  func updateActive(forCode keyCode: UInt16, status: Bool) {
-    if let actionName = actions[keyCode] {
+  func updateActive(forCode code: UInt16, status: Bool) {
+    if let actionName = actions[code] {
       actives[actionName] = status
+    }
+  }
+
+  // Allows passing all active input codes and just filters against our action dictionary to determine if any relevant codes are
+  // included
+  func updateActives(forCodes codes: [UInt16]) {
+    for action in actions {
+      actives[action.value] = codes.contains(action.key)
     }
   }
 }

@@ -10,7 +10,7 @@ import GameplayKit
 import SpriteKit
 
 class PlayerFactory {
-  static func createPlayer(at startPosition: CGPoint, name: String, color: NSColor) -> GKEntity {
+  static func createPlayer(at startPosition: CGPoint, name: String, color: NSColor, actions: Dictionary<UInt16, String>) -> GKEntity {
     let player = GKEntity()
 
     let playerRadius: CGFloat = 50
