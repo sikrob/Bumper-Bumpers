@@ -14,7 +14,10 @@ class PlayScene: SKScene {
   var entities: [GKEntity] = []
   var activeKeys: Array<UInt16> = []
 
+  private var stateMachine: PlaySceneStateMachine?
+
   private let visibleShapeSystem: VisibleShapeSystem = VisibleShapeSystem()
+  private let inputActionActiveSystem: InputActionActiveSystem = InputActionActiveSystem()
 
   override func sceneDidLoad() {
     self.scaleMode = .aspectFill
@@ -24,7 +27,6 @@ class PlayScene: SKScene {
     // Ideally get these from user preferences:
     let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"]
     let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"]
-
     let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary)
     let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary)
 
@@ -37,6 +39,10 @@ class PlayScene: SKScene {
     for shapeNode in visibleShapeSystem.allShapeNodes() {
       self.addChild(shapeNode)
     }
+
+    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputActionActiveSystem: inputActionActiveSystem)
+    self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
+    self.stateMachine?.enter(PlayPlayingState.self)
   }
 
   override func keyDown(with event: NSEvent) {
@@ -50,6 +56,12 @@ class PlayScene: SKScene {
   override func keyUp(with event: NSEvent) {
     if activeKeys.contains(event.keyCode) {
       activeKeys.remove(at: activeKeys.firstIndex(of: event.keyCode)!)
+    }
+  }
+
+  override func update(_ currentTime: TimeInterval) {
+    if let playSceneStateMachine = stateMachine {
+      playSceneStateMachine.update(deltaTime: currentTime, scene: self)
     }
   }
 }

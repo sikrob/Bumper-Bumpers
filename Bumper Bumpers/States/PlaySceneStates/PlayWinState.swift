@@ -1,13 +1,13 @@
 //
-//  Playing.swift
+//  PlayWinState.swift
 //  Bumper Bumpers
 //
-//  Created by Robert Sikorski on 6/20/19.
+//  Created by Robert Sikorski on 6/21/19.
 //  Copyright © 2019 Robert Sikorski. All rights reserved.
 //
 
 import GameplayKit
 
-class Playing: GKState {
-  
+class PlayWinState: GKState {
+
 }
