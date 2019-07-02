@@ -17,7 +17,7 @@ class PlayScene: SKScene {
   private var stateMachine: PlaySceneStateMachine?
 
   private let visibleShapeSystem: VisibleShapeSystem = VisibleShapeSystem()
-  private let inputActionActiveSystem: InputActionActiveSystem = InputActionActiveSystem()
+  private let inputActionActivationSystem: InputActionActivationSystem = InputActionActivationSystem()
 
   override func sceneDidLoad() {
     self.scaleMode = .aspectFill
@@ -40,7 +40,7 @@ class PlayScene: SKScene {
       self.addChild(shapeNode)
     }
 
-    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputActionActiveSystem: inputActionActiveSystem)
+    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputActionActivationSystem: inputActionActivationSystem)
     self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
     self.stateMachine?.enter(PlayPlayingState.self)
   }

@@ -1,5 +1,5 @@
 //
-//  InputActionActiveSystem.swift
+//  InputActionActivationSystem
 //  Bumper Bumpers
 //
 //  Created by Robert Sikorski on 6/21/19.
@@ -8,7 +8,7 @@
 
 import GameplayKit
 
-class InputActionActiveSystem: GKComponentSystem<InputActionActiveComponent> {
+class InputActionActivationSystem: GKComponentSystem<InputActionActiveComponent> {
   override init() {
     super.init(componentClass: InputActionActiveComponent.self)
   }

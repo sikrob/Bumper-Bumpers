@@ -24,7 +24,7 @@
 		E1D708EF22BB2ECB0062CE8A /* MainLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E1D708EE22BB2ECB0062CE8A /* MainLogo.png */; };
 		E1D708F222BC7B620062CE8A /* PlayPlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D708F122BC7B620062CE8A /* PlayPlayingState.swift */; };
 		E1D708F422BD96760062CE8A /* PlayWinState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D708F322BD96760062CE8A /* PlayWinState.swift */; };
-		E1D708F922BD9B130062CE8A /* InputActionActiveSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D708F822BD9B130062CE8A /* InputActionActiveSystem.swift */; };
+		E1D708F922BD9B130062CE8A /* InputActionActivationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D708F822BD9B130062CE8A /* InputActionActivationSystem.swift */; };
 		E1D708FC22BEA1240062CE8A /* PlaySceneStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D708FB22BEA1240062CE8A /* PlaySceneStateMachine.swift */; };
 		E1D708FE22BEC1FB0062CE8A /* PlaySceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D708FD22BEC1FB0062CE8A /* PlaySceneState.swift */; };
 		E1DE636E2248319A00084717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE636D2248319A00084717 /* AppDelegate.swift */; };
@@ -57,7 +57,7 @@
 		E1D708EE22BB2ECB0062CE8A /* MainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogo.png; sourceTree = "<group>"; };
 		E1D708F122BC7B620062CE8A /* PlayPlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPlayingState.swift; sourceTree = "<group>"; };
 		E1D708F322BD96760062CE8A /* PlayWinState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWinState.swift; sourceTree = "<group>"; };
-		E1D708F822BD9B130062CE8A /* InputActionActiveSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputActionActiveSystem.swift; sourceTree = "<group>"; };
+		E1D708F822BD9B130062CE8A /* InputActionActivationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputActionActivationSystem.swift; sourceTree = "<group>"; };
 		E1D708FB22BEA1240062CE8A /* PlaySceneStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySceneStateMachine.swift; sourceTree = "<group>"; };
 		E1D708FD22BEC1FB0062CE8A /* PlaySceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySceneState.swift; sourceTree = "<group>"; };
 		E1DE636A2248319A00084717 /* Bumper Bumpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bumper Bumpers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +110,7 @@
 			children = (
 				E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */,
 				E154EAF1224FEF71004377B1 /* VisibleShapeSystem.swift */,
-				E1D708F822BD9B130062CE8A /* InputActionActiveSystem.swift */,
+				E1D708F822BD9B130062CE8A /* InputActionActivationSystem.swift */,
 			);
 			path = Systems;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				E1DE63762248319A00084717 /* ViewController.swift in Sources */,
 				E1D708F422BD96760062CE8A /* PlayWinState.swift in Sources */,
 				E1825F98225FF7BD00946DA6 /* PlayerFactory.swift in Sources */,
-				E1D708F922BD9B130062CE8A /* InputActionActiveSystem.swift in Sources */,
+				E1D708F922BD9B130062CE8A /* InputActionActivationSystem.swift in Sources */,
 				E1CC4B0D22487AEF003C7469 /* MainMenuState.swift in Sources */,
 				E1DE638922483BDB00084717 /* GameLoadingState.swift in Sources */,
 				E1DE6384224837F500084717 /* GameController.swift in Sources */,
