@@ -10,11 +10,11 @@ import GameplayKit
 
 class PlayPlayingState: GKState, PlaySceneState {
   private let visibleShapeSystem: VisibleShapeSystem
-  private let inputActionActivationSystem: InputActionActivationSystem
+  private let inputMovementSystem: InputMovementSystem
 
-  init(with visibleShapeSystem: VisibleShapeSystem, inputActionActivationSystem: InputActionActivationSystem) {
+  init(with visibleShapeSystem: VisibleShapeSystem, inputMovementSystem: InputMovementSystem) {
     self.visibleShapeSystem = visibleShapeSystem
-    self.inputActionActivationSystem = inputActionActivationSystem
+    self.inputMovementSystem = inputMovementSystem
     super.init()
   }
 
@@ -23,7 +23,7 @@ class PlayPlayingState: GKState, PlaySceneState {
   }
 
   func update(delatTime seconds: TimeInterval, input: [UInt16]) {
-    inputActionActivationSystem.update(deltaTime: seconds, input: input)
+    inputMovementSystem.update(deltaTime: seconds, input: input)
     visibleShapeSystem.update(deltaTime: seconds)
   }
 }

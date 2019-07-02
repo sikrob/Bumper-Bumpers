@@ -17,7 +17,7 @@ class PlayScene: SKScene {
   private var stateMachine: PlaySceneStateMachine?
 
   private let visibleShapeSystem: VisibleShapeSystem = VisibleShapeSystem()
-  private let inputActionActivationSystem: InputActionActivationSystem = InputActionActivationSystem()
+  private let inputMovementSystem: InputMovementSystem = InputMovementSystem()
 
   override func sceneDidLoad() {
     self.scaleMode = .aspectFill
@@ -25,8 +25,8 @@ class PlayScene: SKScene {
     let arena = ArenaFactory.createArena()
 
     // Ideally get these from user preferences:
-    let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"]
-    let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"]
+    let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"] // wasd
+    let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"] // pl;'
     let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary)
     let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary)
 
@@ -40,7 +40,7 @@ class PlayScene: SKScene {
       self.addChild(shapeNode)
     }
 
-    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputActionActivationSystem: inputActionActivationSystem)
+    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputMovementSystem: inputMovementSystem)
     self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
     self.stateMachine?.enter(PlayPlayingState.self)
   }
