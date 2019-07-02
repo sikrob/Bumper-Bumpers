@@ -19,8 +19,12 @@ class PlayerFactory {
     playerShape.fillColor = color
     playerShape.position = startPosition
     playerShape.zPosition = 1.0
+    let playerPhysicsBody = SKPhysicsBody.init(circleOfRadius: playerRadius)
+    playerPhysicsBody.affectedByGravity = false
+    playerShape.physicsBody = playerPhysicsBody
 
     player.addComponent(VisibleShapeComponent(withVisibleShape: playerShape))
+    player.addComponent(InputMovementComponent(with: playerPhysicsBody, inputDirections: actions))
 
     return player
   }
