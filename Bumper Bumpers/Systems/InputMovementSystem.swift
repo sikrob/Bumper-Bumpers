@@ -14,7 +14,9 @@ class InputMovementSystem: GKComponentSystem<InputMovementComponent> {
   }
 
   func update(deltaTime seconds: TimeInterval, input: [UInt16]) {
-    // update directions
-    // update physics body
+    for component in components {
+      component.updateActiveDirections(forCodes: input)
+//      component.physicsBody.
+    }
   }
 }
