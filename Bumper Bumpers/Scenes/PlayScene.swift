@@ -43,7 +43,7 @@ class PlayScene: SKScene {
       self.addChild(shapeNode)
     }
 
-    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
+    let playPlayingState = PlayPlayingState(withInputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
     self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
     self.stateMachine?.enter(PlayPlayingState.self)
   }

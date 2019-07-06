@@ -9,12 +9,10 @@
 import GameplayKit
 
 class PlayPlayingState: GKState, PlaySceneState {
-  private let visibleShapeSystem: VisibleShapeSystem
   private let inputMovementSystem: InputMovementSystem
   private let lossTrackingSystem: LossTrackingSystem
 
-  init(with visibleShapeSystem: VisibleShapeSystem, inputMovementSystem: InputMovementSystem, lossTrackingSystem: LossTrackingSystem) {
-    self.visibleShapeSystem = visibleShapeSystem
+  init(withInputMovementSystem inputMovementSystem: InputMovementSystem, lossTrackingSystem: LossTrackingSystem) {
     self.inputMovementSystem = inputMovementSystem
     self.lossTrackingSystem = lossTrackingSystem
     super.init()
@@ -30,6 +28,5 @@ class PlayPlayingState: GKState, PlaySceneState {
       print(winner) // transition to PlayWinState with winner in hand
     }
     inputMovementSystem.update(deltaTime: seconds, input: input)
-    visibleShapeSystem.update(deltaTime: seconds)
   }
 }
