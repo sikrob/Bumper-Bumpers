@@ -15,8 +15,17 @@ class InputMovementSystem: GKComponentSystem<InputMovementComponent> {
 
   func update(deltaTime seconds: TimeInterval, input: [UInt16]) {
     for component in components {
-      component.updateActiveDirections(forCodes: input)
-//      component.physicsBody.
+      component.activeDirections = currentActiveDirections(fromCodes: input, component: component)
+      //
     }
+  }
+
+  func currentActiveDirections(fromCodes codes: [UInt16], component: InputMovementComponent) -> Dictionary<String, Bool> {
+    var currentActiveDirections: Dictionary<String, Bool> = [:]
+    for direction in component.inputDirections {
+      currentActiveDirections.updateValue(codes.contains(direction.key), forKey: direction.value)
+    }
+
+    return currentActiveDirections
   }
 }

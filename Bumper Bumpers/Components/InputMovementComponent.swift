@@ -26,16 +26,4 @@ class InputMovementComponent: GKComponent {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-
-  func updateActiveDirection(forCode code: UInt16, status: Bool) {
-    if let direction = inputDirections[code] {
-      activeDirections[direction] = status
-    }
-  }
-
-  func updateActiveDirections(forCodes codes: [UInt16]) {
-    for direction in inputDirections {
-      activeDirections[direction.value] = codes.contains(direction.key)
-    }
-  }
 }
