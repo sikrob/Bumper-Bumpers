@@ -10,7 +10,7 @@ import GameplayKit
 import SpriteKit
 
 class PlayerFactory {
-  static func createPlayer(at startPosition: CGPoint, name: String, color: NSColor, actions: Dictionary<UInt16, String>) -> GKEntity {
+  static func createPlayer(at startPosition: CGPoint, name: String, color: NSColor, actions: Dictionary<UInt16, String>, arena: GKEntity) -> GKEntity {
     let player = GKEntity()
 
     let playerRadius: CGFloat = 50
@@ -26,6 +26,7 @@ class PlayerFactory {
 
     player.addComponent(VisibleShapeComponent(withVisibleShape: playerShape))
     player.addComponent(InputMovementComponent(with: playerPhysicsBody, baseMovementAcceleration: baseMovementAcceleration, inputDirections: actions))
+    player.addComponent(LossTrackingComponent(withTargetShape: arena.component(ofType: VisibleShapeComponent.self)!.visibleShape, targeterShape: playerShape))
 
     return player
   }

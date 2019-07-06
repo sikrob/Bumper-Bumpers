@@ -18,6 +18,7 @@ class PlayScene: SKScene {
 
   private let visibleShapeSystem: VisibleShapeSystem = VisibleShapeSystem()
   private let inputMovementSystem: InputMovementSystem = InputMovementSystem()
+  private let lossTrackingSystem: LossTrackingSystem = LossTrackingSystem()
 
   override func sceneDidLoad() {
     self.scaleMode = .aspectFill
@@ -27,12 +28,13 @@ class PlayScene: SKScene {
     // Ideally get these from user preferences:
     let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"] // wasd
     let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"] // pl;'
-    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary)
-    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary)
+    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary, arena: arena)
+    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary, arena: arena)
 
     self.entities.append(contentsOf: [arena, player1, player2])
 
     for entity in entities {
+      lossTrackingSystem.addComponent(foundIn: entity)
       inputMovementSystem.addComponent(foundIn: entity)
       visibleShapeSystem.addComponent(foundIn: entity)
     }
@@ -41,7 +43,7 @@ class PlayScene: SKScene {
       self.addChild(shapeNode)
     }
 
-    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputMovementSystem: inputMovementSystem)
+    let playPlayingState = PlayPlayingState(with: visibleShapeSystem, inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
     self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
     self.stateMachine?.enter(PlayPlayingState.self)
   }

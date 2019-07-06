@@ -10,6 +10,8 @@
 		E154EAF0224FEEE4004377B1 /* VisibleShapeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154EAEF224FEEE4004377B1 /* VisibleShapeComponent.swift */; };
 		E154EAF2224FEF71004377B1 /* VisibleShapeSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154EAF1224FEF71004377B1 /* VisibleShapeSystem.swift */; };
 		E154EAF5224FF2EF004377B1 /* ArenaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154EAF4224FF2EF004377B1 /* ArenaFactory.swift */; };
+		E162FF4322D0DA1600851B30 /* LossTrackingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF4222D0DA1600851B30 /* LossTrackingSystem.swift */; };
+		E162FF4522D0E58D00851B30 /* LossTrackingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF4422D0E58D00851B30 /* LossTrackingComponent.swift */; };
 		E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1072249B6D3007FFC5C /* ClickableComponent.swift */; };
 		E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */; };
 		E173F10D2249BB76007FFC5C /* ClickMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F10C2249BB76007FFC5C /* ClickMode.swift */; };
@@ -43,6 +45,8 @@
 		E154EAEF224FEEE4004377B1 /* VisibleShapeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleShapeComponent.swift; sourceTree = "<group>"; };
 		E154EAF1224FEF71004377B1 /* VisibleShapeSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleShapeSystem.swift; sourceTree = "<group>"; };
 		E154EAF4224FF2EF004377B1 /* ArenaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenaFactory.swift; sourceTree = "<group>"; };
+		E162FF4222D0DA1600851B30 /* LossTrackingSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingSystem.swift; sourceTree = "<group>"; };
+		E162FF4422D0E58D00851B30 /* LossTrackingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingComponent.swift; sourceTree = "<group>"; };
 		E173F1072249B6D3007FFC5C /* ClickableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableComponent.swift; sourceTree = "<group>"; };
 		E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem.swift; sourceTree = "<group>"; };
 		E173F10C2249BB76007FFC5C /* ClickMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickMode.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				E173F1072249B6D3007FFC5C /* ClickableComponent.swift */,
 				E154EAEF224FEEE4004377B1 /* VisibleShapeComponent.swift */,
 				E1CB9AC522CB003E0046E1E5 /* InputMovementComponent.swift */,
+				E162FF4422D0E58D00851B30 /* LossTrackingComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 				E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */,
 				E154EAF1224FEF71004377B1 /* VisibleShapeSystem.swift */,
 				E1CB9AC722CB04DF0046E1E5 /* InputMovementSystem.swift */,
+				E162FF4222D0DA1600851B30 /* LossTrackingSystem.swift */,
 			);
 			path = Systems;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				E1825F98225FF7BD00946DA6 /* PlayerFactory.swift in Sources */,
 				E1CC4B0D22487AEF003C7469 /* MainMenuState.swift in Sources */,
 				E1DE638922483BDB00084717 /* GameLoadingState.swift in Sources */,
+				E162FF4522D0E58D00851B30 /* LossTrackingComponent.swift in Sources */,
 				E1DE6384224837F500084717 /* GameController.swift in Sources */,
 				E1DE638E22483CAE00084717 /* GameLoadingScene.swift in Sources */,
 				E154EAF0224FEEE4004377B1 /* VisibleShapeComponent.swift in Sources */,
@@ -320,6 +327,7 @@
 				E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */,
 				E1CC4B0A224879CF003C7469 /* MainMenuScene.swift in Sources */,
 				E1D708FC22BEA1240062CE8A /* PlaySceneStateMachine.swift in Sources */,
+				E162FF4322D0DA1600851B30 /* LossTrackingSystem.swift in Sources */,
 				E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */,
 				E154EAF2224FEF71004377B1 /* VisibleShapeSystem.swift in Sources */,
 				E154EAF5224FF2EF004377B1 /* ArenaFactory.swift in Sources */,
