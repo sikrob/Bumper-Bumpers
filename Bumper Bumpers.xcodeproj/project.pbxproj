@@ -12,6 +12,8 @@
 		E154EAF5224FF2EF004377B1 /* ArenaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154EAF4224FF2EF004377B1 /* ArenaFactory.swift */; };
 		E162FF4322D0DA1600851B30 /* LossTrackingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF4222D0DA1600851B30 /* LossTrackingSystem.swift */; };
 		E162FF4522D0E58D00851B30 /* LossTrackingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF4422D0E58D00851B30 /* LossTrackingComponent.swift */; };
+		E162FF5522D0F27800851B30 /* LossTrackingSystem_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5422D0F27800851B30 /* LossTrackingSystem_Tests.swift */; };
+		E162FF5722D0F2CD00851B30 /* LossTrackingComponent_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */; };
 		E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1072249B6D3007FFC5C /* ClickableComponent.swift */; };
 		E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */; };
 		E173F10D2249BB76007FFC5C /* ClickMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F10C2249BB76007FFC5C /* ClickMode.swift */; };
@@ -41,12 +43,26 @@
 		E1DE638E22483CAE00084717 /* GameLoadingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE638D22483CAE00084717 /* GameLoadingScene.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E162FF4F22D0F1D600851B30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1DE63622248319A00084717 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DE63692248319A00084717;
+			remoteInfo = "Bumper Bumpers";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E154EAEF224FEEE4004377B1 /* VisibleShapeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleShapeComponent.swift; sourceTree = "<group>"; };
 		E154EAF1224FEF71004377B1 /* VisibleShapeSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleShapeSystem.swift; sourceTree = "<group>"; };
 		E154EAF4224FF2EF004377B1 /* ArenaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenaFactory.swift; sourceTree = "<group>"; };
 		E162FF4222D0DA1600851B30 /* LossTrackingSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingSystem.swift; sourceTree = "<group>"; };
 		E162FF4422D0E58D00851B30 /* LossTrackingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingComponent.swift; sourceTree = "<group>"; };
+		E162FF4A22D0F1D600851B30 /* Bumper Bumpers Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bumper Bumpers Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E162FF4E22D0F1D600851B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E162FF5422D0F27800851B30 /* LossTrackingSystem_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingSystem_Tests.swift; sourceTree = "<group>"; };
+		E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingComponent_Tests.swift; sourceTree = "<group>"; };
 		E173F1072249B6D3007FFC5C /* ClickableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableComponent.swift; sourceTree = "<group>"; };
 		E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem.swift; sourceTree = "<group>"; };
 		E173F10C2249BB76007FFC5C /* ClickMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickMode.swift; sourceTree = "<group>"; };
@@ -80,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E162FF4722D0F1D600851B30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1DE63672248319A00084717 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +120,16 @@
 				E1825F97225FF7BD00946DA6 /* PlayerFactory.swift */,
 			);
 			path = EntityFactories;
+			sourceTree = "<group>";
+		};
+		E162FF4B22D0F1D600851B30 /* Bumper Bumpers Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E162FF4E22D0F1D600851B30 /* Info.plist */,
+				E162FF5422D0F27800851B30 /* LossTrackingSystem_Tests.swift */,
+				E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */,
+			);
+			path = "Bumper Bumpers Tests";
 			sourceTree = "<group>";
 		};
 		E173F1052249B695007FFC5C /* Components */ = {
@@ -177,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DE636C2248319A00084717 /* Bumper Bumpers */,
+				E162FF4B22D0F1D600851B30 /* Bumper Bumpers Tests */,
 				E1DE636B2248319A00084717 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DE636A2248319A00084717 /* Bumper Bumpers.app */,
+				E162FF4A22D0F1D600851B30 /* Bumper Bumpers Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,6 +273,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E162FF4922D0F1D600851B30 /* Bumper Bumpers Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E162FF5122D0F1D600851B30 /* Build configuration list for PBXNativeTarget "Bumper Bumpers Tests" */;
+			buildPhases = (
+				E162FF4622D0F1D600851B30 /* Sources */,
+				E162FF4722D0F1D600851B30 /* Frameworks */,
+				E162FF4822D0F1D600851B30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E162FF5022D0F1D600851B30 /* PBXTargetDependency */,
+			);
+			name = "Bumper Bumpers Tests";
+			productName = "Bumper Bumpers Tests";
+			productReference = E162FF4A22D0F1D600851B30 /* Bumper Bumpers Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E1DE63692248319A00084717 /* Bumper Bumpers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1DE63802248319D00084717 /* Build configuration list for PBXNativeTarget "Bumper Bumpers" */;
@@ -261,10 +314,14 @@
 		E1DE63622248319A00084717 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Robert Sikorski";
 				TargetAttributes = {
+					E162FF4922D0F1D600851B30 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = E1DE63692248319A00084717;
+					};
 					E1DE63692248319A00084717 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
@@ -285,11 +342,19 @@
 			projectRoot = "";
 			targets = (
 				E1DE63692248319A00084717 /* Bumper Bumpers */,
+				E162FF4922D0F1D600851B30 /* Bumper Bumpers Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E162FF4822D0F1D600851B30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1DE63682248319A00084717 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,6 +372,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E162FF4622D0F1D600851B30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E162FF5522D0F27800851B30 /* LossTrackingSystem_Tests.swift in Sources */,
+				E162FF5722D0F2CD00851B30 /* LossTrackingComponent_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1DE63662248319A00084717 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +415,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E162FF5022D0F1D600851B30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DE63692248319A00084717 /* Bumper Bumpers */;
+			targetProxy = E162FF4F22D0F1D600851B30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		E1DE63792248319D00084717 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -353,6 +435,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E162FF5222D0F1D600851B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DS7Z2F756Z;
+				INFOPLIST_FILE = "Bumper Bumpers Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sikrob.Bumper-Bumpers-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bumper Bumpers.app/Contents/MacOS/Bumper Bumpers";
+			};
+			name = Debug;
+		};
+		E162FF5322D0F1D600851B30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DS7Z2F756Z;
+				INFOPLIST_FILE = "Bumper Bumpers Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sikrob.Bumper-Bumpers-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bumper Bumpers.app/Contents/MacOS/Bumper Bumpers";
+			};
+			name = Release;
+		};
 		E1DE637E2248319D00084717 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E162FF5122D0F1D600851B30 /* Build configuration list for PBXNativeTarget "Bumper Bumpers Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E162FF5222D0F1D600851B30 /* Debug */,
+				E162FF5322D0F1D600851B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1DE63652248319A00084717 /* Build configuration list for PBXProject "Bumper Bumpers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
