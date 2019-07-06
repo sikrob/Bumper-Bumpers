@@ -47,8 +47,6 @@ class PlayScene: SKScene {
   }
 
   override func keyDown(with event: NSEvent) {
-    print(event.keyCode)
-
     if !activeKeys.contains(event.keyCode) {
       activeKeys.append(event.keyCode)
     }
