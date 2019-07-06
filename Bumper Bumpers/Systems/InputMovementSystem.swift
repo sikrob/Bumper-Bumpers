@@ -7,6 +7,7 @@
 //
 
 import GameplayKit
+import SpriteKit
 
 class InputMovementSystem: GKComponentSystem<InputMovementComponent> {
   override init() {
@@ -16,7 +17,7 @@ class InputMovementSystem: GKComponentSystem<InputMovementComponent> {
   func update(deltaTime seconds: TimeInterval, input: [UInt16]) {
     for component in components {
       component.activeDirections = currentActiveDirections(fromCodes: input, component: component)
-      //
+      updatePhysicsBodyVelocity(forComponent: component)
     }
   }
 
@@ -27,5 +28,29 @@ class InputMovementSystem: GKComponentSystem<InputMovementComponent> {
     }
 
     return currentActiveDirections
+  }
+
+  func updatePhysicsBodyVelocity(forComponent component: InputMovementComponent) {
+    let physicsBody = component.physicsBody
+    var dx: Int = 0, dy: Int = 0
+
+    for direction in component.activeDirections {
+      if direction.value {
+        if direction.key == "UP" {
+          dy += component.baseMovementAcceleration
+        }
+        if direction.key == "DOWN" {
+          dy -= component.baseMovementAcceleration
+        }
+        if direction.key == "RIGHT" {
+          dx += component.baseMovementAcceleration
+        }
+        if direction.key == "LEFT" {
+          dx -= component.baseMovementAcceleration
+        }
+      }
+    }
+
+    physicsBody.velocity = CGVector(dx: dx, dy: dy)
   }
 }

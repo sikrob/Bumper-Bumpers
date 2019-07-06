@@ -33,6 +33,7 @@ class PlayScene: SKScene {
     self.entities.append(contentsOf: [arena, player1, player2])
 
     for entity in entities {
+      inputMovementSystem.addComponent(foundIn: entity)
       visibleShapeSystem.addComponent(foundIn: entity)
     }
 
