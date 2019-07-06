@@ -12,7 +12,7 @@ class PlayPlayingState: GKState, PlaySceneState {
   private let inputMovementSystem: InputMovementSystem
   private let lossTrackingSystem: LossTrackingSystem
 
-  init(withInputMovementSystem inputMovementSystem: InputMovementSystem, lossTrackingSystem: LossTrackingSystem) {
+  init(inputMovementSystem: InputMovementSystem, lossTrackingSystem: LossTrackingSystem) {
     self.inputMovementSystem = inputMovementSystem
     self.lossTrackingSystem = lossTrackingSystem
     super.init()
