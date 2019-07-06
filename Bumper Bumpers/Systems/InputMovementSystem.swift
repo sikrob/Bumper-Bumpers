@@ -14,7 +14,7 @@ class InputMovementSystem: GKComponentSystem<InputMovementComponent> {
     super.init(componentClass: InputMovementComponent.self)
   }
 
-  func update(deltaTime seconds: TimeInterval, input: [UInt16]) {
+  func update(input: [UInt16]) {
     for component in components {
       component.activeDirections = currentActiveDirections(fromCodes: input, component: component)
       updatePhysicsBodyVelocity(forComponent: component)

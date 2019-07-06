@@ -9,5 +9,5 @@
 import GameplayKit
 
 protocol PlaySceneState {
-  func update(delatTime seconds: TimeInterval, input: [UInt16])
+  func update(input: [UInt16])
 }

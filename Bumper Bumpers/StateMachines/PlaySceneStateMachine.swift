@@ -13,7 +13,7 @@ class PlaySceneStateMachine: GKStateMachine {
     let currentInput = scene.activeKeys
 
     if let playSceneState = currentState as? PlaySceneState {
-      playSceneState.update(delatTime: seconds, input: currentInput)
+      playSceneState.update(input: currentInput)
     } else if let updatableState = currentState {
       updatableState.update(deltaTime: seconds)
     }

@@ -19,14 +19,14 @@ class PlayPlayingState: GKState, PlaySceneState {
   }
 
   override func update(deltaTime seconds: TimeInterval) {
-    update(delatTime: seconds, input: [])
+    update(input: [])
   }
 
-  func update(delatTime seconds: TimeInterval, input: [UInt16]) {
+  func update(input: [UInt16]) {
     lossTrackingSystem.update()
     if let winner = lossTrackingSystem.findWinner() {
       print(winner) // transition to PlayWinState with winner in hand
     }
-    inputMovementSystem.update(deltaTime: seconds, input: input)
+    inputMovementSystem.update(input: input)
   }
 }
