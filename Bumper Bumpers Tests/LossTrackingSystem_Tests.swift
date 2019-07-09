@@ -35,6 +35,7 @@ class LossTrackingSystem_Tests: XCTestCase {
 
   override func tearDown() {
     super.tearDown()
+    lossTrackingSystem = nil
     lossTrackingComponentB = nil
     lossTrackingComponentA = nil
     targeterShapeB = nil
