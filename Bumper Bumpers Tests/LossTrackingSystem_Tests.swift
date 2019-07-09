@@ -43,7 +43,7 @@ class LossTrackingSystem_Tests: XCTestCase {
     targetShape = nil
   }
 
-  func testLossTrackSystemReturnNilWhenNoLosers() {
+  func testFindWinnerReturnsNilWhenNoLosers() {
     targetShape.position = CGPoint(x: 0, y: 0)
     targeterShapeA.position = CGPoint(x: 0, y: 0)
     targeterShapeB.position = CGPoint(x: 0, y: 0)
@@ -52,7 +52,7 @@ class LossTrackingSystem_Tests: XCTestCase {
     XCTAssertNil(winner)
   }
 
-  func testLossTrackSystemReturnNilWhenOnlyLosers() {
+  func testFindWinnerReturnsNilWhenOnlyLosers() {
     targetShape.position = CGPoint(x: 0, y: 0)
     targeterShapeA.position = CGPoint(x: 100, y: 0)
     targeterShapeB.position = CGPoint(x: 100, y: 0)
@@ -61,7 +61,7 @@ class LossTrackingSystem_Tests: XCTestCase {
     XCTAssertNil(winner)
   }
 
-  func testLossTrackSystemReturnWinnerNameIfWinner() {
+  func testFindWinnerReturnsWinnerNameIfWinner() {
     targetShape.position = CGPoint(x: 0, y: 0)
     targeterShapeA.position = CGPoint(x: 0, y: 0)
     targeterShapeB.position = CGPoint(x: 100, y: 0)

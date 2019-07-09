@@ -26,14 +26,14 @@ class LossTrackingComponent_Tests: XCTestCase {
     targeterShape = nil
   }
 
-  func testLossTrackingComponentsCanInitWithNonLoser() {
+  func testCanInitWithNonLoser() {
     targetShape.position = CGPoint(x: 0, y: 0)
     targeterShape.position = CGPoint(x: 0, y: 0)
     let lossTrackingComponent = LossTrackingComponent(withTargetShape: targetShape, targeterShape: targeterShape)
     XCTAssert(!lossTrackingComponent.loser)
   }
 
-  func testLossTrackingComponentsCanInitWithLoser() {
+  func testCanInitWithLoser() {
     targetShape.position = CGPoint(x: 0, y: 0)
     targeterShape.position = CGPoint(x: 100, y: 0)
     let lossTrackingComponent = LossTrackingComponent(withTargetShape: targetShape, targeterShape: targeterShape)
