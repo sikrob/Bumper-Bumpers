@@ -10,7 +10,6 @@ import XCTest
 import SpriteKit
 @testable import Bumper_Bumpers
 
-
 class LossTrackingSystem_Tests: XCTestCase {
   var targetShape: SKShapeNode!
   var targeterShapeA: SKShapeNode!
