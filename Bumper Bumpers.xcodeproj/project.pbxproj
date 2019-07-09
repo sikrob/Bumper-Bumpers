@@ -15,6 +15,7 @@
 		E162FF5522D0F27800851B30 /* LossTrackingSystem_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5422D0F27800851B30 /* LossTrackingSystem_Tests.swift */; };
 		E162FF5722D0F2CD00851B30 /* LossTrackingComponent_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */; };
 		E162FF5922D43FB500851B30 /* ClickCheckSystem_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5822D43FB500851B30 /* ClickCheckSystem_Tests.swift */; };
+		E162FF5B22D4451500851B30 /* InputMovementSystem_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5A22D4451500851B30 /* InputMovementSystem_Tests.swift */; };
 		E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1072249B6D3007FFC5C /* ClickableComponent.swift */; };
 		E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */; };
 		E173F10D2249BB76007FFC5C /* ClickMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F10C2249BB76007FFC5C /* ClickMode.swift */; };
@@ -65,6 +66,7 @@
 		E162FF5422D0F27800851B30 /* LossTrackingSystem_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingSystem_Tests.swift; sourceTree = "<group>"; };
 		E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingComponent_Tests.swift; sourceTree = "<group>"; };
 		E162FF5822D43FB500851B30 /* ClickCheckSystem_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem_Tests.swift; sourceTree = "<group>"; };
+		E162FF5A22D4451500851B30 /* InputMovementSystem_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMovementSystem_Tests.swift; sourceTree = "<group>"; };
 		E173F1072249B6D3007FFC5C /* ClickableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableComponent.swift; sourceTree = "<group>"; };
 		E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem.swift; sourceTree = "<group>"; };
 		E173F10C2249BB76007FFC5C /* ClickMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickMode.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				E162FF5422D0F27800851B30 /* LossTrackingSystem_Tests.swift */,
 				E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */,
 				E162FF5822D43FB500851B30 /* ClickCheckSystem_Tests.swift */,
+				E162FF5A22D4451500851B30 /* InputMovementSystem_Tests.swift */,
 			);
 			path = "Bumper Bumpers Tests";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E162FF5B22D4451500851B30 /* InputMovementSystem_Tests.swift in Sources */,
 				E162FF5922D43FB500851B30 /* ClickCheckSystem_Tests.swift in Sources */,
 				E162FF5522D0F27800851B30 /* LossTrackingSystem_Tests.swift in Sources */,
 				E162FF5722D0F2CD00851B30 /* LossTrackingComponent_Tests.swift in Sources */,
