@@ -43,6 +43,16 @@ class LossTrackingSystem_Tests: XCTestCase {
     targetShape = nil
   }
 
+  func testUpdateChangesLoserStatus() {
+    targetShape.position = CGPoint(x: 0, y: 0)
+    targeterShapeA.position = CGPoint(x: 0, y: 0)
+    lossTrackingSystem.update()
+    XCTAssert(!lossTrackingComponentA.loser)
+    targeterShapeA.position = CGPoint(x: 100, y: 0)
+    lossTrackingSystem.update()
+    XCTAssert(lossTrackingComponentA.loser)
+  }
+
   func testFindWinnerReturnsNilWhenNoLosers() {
     targetShape.position = CGPoint(x: 0, y: 0)
     targeterShapeA.position = CGPoint(x: 0, y: 0)
