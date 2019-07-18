@@ -13,15 +13,19 @@ class PlayScene: SKScene {
   var state: PlayState?
   var entities: [GKEntity] = []
   var activeKeys: Array<UInt16> = []
+  var systems: [GKComponentSystem<GKComponent>] = []
 
   private var stateMachine: PlaySceneStateMachine?
 
   private let visibleShapeSystem: VisibleShapeSystem = VisibleShapeSystem()
   private let inputMovementSystem: InputMovementSystem = InputMovementSystem()
   private let lossTrackingSystem: LossTrackingSystem = LossTrackingSystem()
+  private let clickCheckSystem: ClickCheckSystem = ClickCheckSystem()
 
   override func sceneDidLoad() {
     self.scaleMode = .aspectFill
+
+    systems = [visibleShapeSystem, inputMovementSystem, lossTrackingSystem, clickCheckSystem] as! [GKComponentSystem<GKComponent>]
 
     let arena = ArenaFactory.createArena()
 
@@ -31,12 +35,8 @@ class PlayScene: SKScene {
     let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary, arena: arena)
     let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary, arena: arena)
 
-    self.entities.append(contentsOf: [arena, player1, player2])
-
-    for entity in entities {
-      lossTrackingSystem.addComponent(foundIn: entity)
-      inputMovementSystem.addComponent(foundIn: entity)
-      visibleShapeSystem.addComponent(foundIn: entity)
+    for entity in [arena, player1, player2] {
+      add(newEntity: entity)
     }
 
     for shapeNode in visibleShapeSystem.allShapeNodes() {
@@ -46,6 +46,14 @@ class PlayScene: SKScene {
     let playPlayingState = PlayPlayingState(inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
     self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
     self.stateMachine?.enter(PlayPlayingState.self)
+  }
+
+  func add(newEntity entity: GKEntity) {
+    entities.append(entity)
+
+    for system in systems {
+      system.addComponent(foundIn: entity)
+    }
   }
 
   override func keyDown(with event: NSEvent) {
