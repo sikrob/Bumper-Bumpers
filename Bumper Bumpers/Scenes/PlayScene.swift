@@ -39,10 +39,6 @@ class PlayScene: SKScene {
       add(newEntity: entity)
     }
 
-    for shapeNode in visibleShapeSystem.allShapeNodes() {
-      self.addChild(shapeNode)
-    }
-
     let playPlayingState = PlayPlayingState(inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
     self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
     self.stateMachine?.enter(PlayPlayingState.self)
@@ -53,6 +49,10 @@ class PlayScene: SKScene {
 
     for system in systems {
       system.addComponent(foundIn: entity)
+    }
+
+    if let visibleShapeComponent = entity.component(ofType: VisibleShapeComponent.self) {
+      self.addChild(visibleShapeComponent.visibleShape)
     }
   }
 
