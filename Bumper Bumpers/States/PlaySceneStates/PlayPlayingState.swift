@@ -24,8 +24,8 @@ class PlayPlayingState: GKState, PlaySceneState {
 
   func update(input: [UInt16]) {
     lossTrackingSystem.update()
-    if let winner = lossTrackingSystem.findWinner() {
-      print(winner) // transition to PlayWinState with winner in hand
+    if lossTrackingSystem.findWinner() != nil {
+      stateMachine!.enter(PlayWinState.self)
     }
     inputMovementSystem.update(input: input)
   }

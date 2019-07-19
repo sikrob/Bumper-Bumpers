@@ -40,7 +40,8 @@ class PlayScene: SKScene {
     }
 
     let playPlayingState = PlayPlayingState(inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
-    self.stateMachine = PlaySceneStateMachine(states: [playPlayingState])
+    let playWinState = PlayWinState(clickCheckSystem: clickCheckSystem, lossTrackingSystem: lossTrackingSystem)
+    self.stateMachine = PlaySceneStateMachine(states: [playPlayingState, playWinState])
     self.stateMachine?.enter(PlayPlayingState.self)
   }
 

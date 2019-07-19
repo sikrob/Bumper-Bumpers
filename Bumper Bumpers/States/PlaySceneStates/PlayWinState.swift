@@ -23,6 +23,8 @@ class PlayWinState: GKState {
   }
 
   func update(clickLocation: CGPoint?) {
+    print("Made it to win state!")
+    print(lossTrackingSystem.findWinner())
     // update click
     // act on results
   }
