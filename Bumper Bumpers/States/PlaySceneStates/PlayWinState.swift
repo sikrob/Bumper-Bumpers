@@ -8,7 +8,7 @@
 
 import GameplayKit
 
-class PlayWinState: GKState {
+class PlayWinState: GKState, PlaySceneState {
   private let clickCheckSystem: ClickCheckSystem
   private let lossTrackingSystem: LossTrackingSystem
 
@@ -19,13 +19,11 @@ class PlayWinState: GKState {
   }
 
   override func update(deltaTime seconds: TimeInterval) {
-    update(clickLocation: nil)
+    update(keyedInput: [], mousedInput: [:])
   }
 
-  func update(clickLocation: CGPoint?) {
+  func update(keyedInput: [UInt16], mousedInput: [ClickMode : [CGPoint]]) {
     print("Made it to win state!")
     print(lossTrackingSystem.findWinner())
-    // update click
-    // act on results
   }
 }

@@ -10,10 +10,11 @@ import GameplayKit
 
 class PlaySceneStateMachine: GKStateMachine {
   func update(deltaTime seconds: TimeInterval, scene: PlayScene) {
-    let currentInput = scene.activeKeys
+    let currentKeyedInput = scene.activeKeys
+    let currentQueuedMouseUps: [ClickMode: [CGPoint]] = [.mouseUp: scene.queuedMouseUps]
 
     if let playSceneState = currentState as? PlaySceneState {
-      playSceneState.update(input: currentInput)
+      playSceneState.update(keyedInput: currentKeyedInput, mousedInput: currentQueuedMouseUps)
     } else if let updatableState = currentState {
       updatableState.update(deltaTime: seconds)
     }

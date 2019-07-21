@@ -19,14 +19,14 @@ class PlayPlayingState: GKState, PlaySceneState {
   }
 
   override func update(deltaTime seconds: TimeInterval) {
-    update(input: [])
+    update(keyedInput: [], mousedInput: [:])
   }
 
-  func update(input: [UInt16]) {
+  func update(keyedInput: [UInt16], mousedInput: [ClickMode: [CGPoint]]) {
     lossTrackingSystem.update()
     if lossTrackingSystem.findWinner() != nil {
       stateMachine!.enter(PlayWinState.self)
     }
-    inputMovementSystem.update(input: input)
+    inputMovementSystem.update(input: keyedInput)
   }
 }

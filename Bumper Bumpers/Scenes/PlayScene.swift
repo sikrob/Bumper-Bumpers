@@ -13,6 +13,7 @@ class PlayScene: SKScene {
   var state: PlayState?
   var entities: [GKEntity] = []
   var activeKeys: Array<UInt16> = []
+  var queuedMouseUps: Array<CGPoint> = []
   var systems: [GKComponentSystem<GKComponent>] = []
 
   private var stateMachine: PlaySceneStateMachine?
@@ -54,6 +55,12 @@ class PlayScene: SKScene {
 
     if let visibleShapeComponent = entity.component(ofType: VisibleShapeComponent.self) {
       self.addChild(visibleShapeComponent.visibleShape)
+    }
+  }
+
+  override func mouseUp(with event: NSEvent) {
+    if !queuedMouseUps.contains(event.location(in: self)) {
+      queuedMouseUps.append(event.location(in: self))
     }
   }
 

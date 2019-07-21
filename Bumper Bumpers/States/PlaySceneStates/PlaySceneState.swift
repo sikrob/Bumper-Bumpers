@@ -9,5 +9,5 @@
 import GameplayKit
 
 protocol PlaySceneState {
-  func update(input: [UInt16])
+  func update(keyedInput: [UInt16], mousedInput: [ClickMode: [CGPoint]])
 }
