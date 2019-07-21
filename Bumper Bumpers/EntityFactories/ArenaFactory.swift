@@ -19,6 +19,7 @@ class ArenaFactory {
     arenaShape.fillColor = .white
     arenaShape.position = CGPoint(x: 0, y: 0)
     arenaShape.zPosition = 0.0
+
     arena.addComponent(VisibleShapeComponent(withVisibleShape: arenaShape))
 
     return arena

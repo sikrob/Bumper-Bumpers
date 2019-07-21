@@ -36,7 +36,9 @@ class PlayScene: SKScene {
     let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary, arena: arena)
     let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary, arena: arena)
 
-    for entity in [arena, player1, player2] {
+    let mainMenuLabel = LabelFactory.createLabel(withText: "Main Menu", position: CGPoint(x: 0, y: 20), name: "MainMenu", visible: false, fontColor: .black)
+
+    for entity in [arena, player1, player2, mainMenuLabel] {
       add(newEntity: entity)
     }
 
@@ -55,6 +57,8 @@ class PlayScene: SKScene {
 
     if let visibleShapeComponent = entity.component(ofType: VisibleShapeComponent.self) {
       self.addChild(visibleShapeComponent.visibleShape)
+    } else if let clickableComponent = entity.component(ofType: ClickableComponent.self) {
+      self.addChild(clickableComponent.clickableNode)
     }
   }
 

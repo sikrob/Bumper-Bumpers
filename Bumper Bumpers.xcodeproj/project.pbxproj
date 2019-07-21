@@ -16,6 +16,7 @@
 		E162FF5722D0F2CD00851B30 /* LossTrackingComponent_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */; };
 		E162FF5922D43FB500851B30 /* ClickCheckSystem_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5822D43FB500851B30 /* ClickCheckSystem_Tests.swift */; };
 		E162FF5B22D4451500851B30 /* InputMovementSystem_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5A22D4451500851B30 /* InputMovementSystem_Tests.swift */; };
+		E162FF5D22E4CEEC00851B30 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162FF5C22E4CEEC00851B30 /* LabelFactory.swift */; };
 		E173F1082249B6D3007FFC5C /* ClickableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1072249B6D3007FFC5C /* ClickableComponent.swift */; };
 		E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */; };
 		E173F10D2249BB76007FFC5C /* ClickMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E173F10C2249BB76007FFC5C /* ClickMode.swift */; };
@@ -67,6 +68,7 @@
 		E162FF5622D0F2CD00851B30 /* LossTrackingComponent_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossTrackingComponent_Tests.swift; sourceTree = "<group>"; };
 		E162FF5822D43FB500851B30 /* ClickCheckSystem_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem_Tests.swift; sourceTree = "<group>"; };
 		E162FF5A22D4451500851B30 /* InputMovementSystem_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMovementSystem_Tests.swift; sourceTree = "<group>"; };
+		E162FF5C22E4CEEC00851B30 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		E173F1072249B6D3007FFC5C /* ClickableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickableComponent.swift; sourceTree = "<group>"; };
 		E173F1092249B8E4007FFC5C /* ClickCheckSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickCheckSystem.swift; sourceTree = "<group>"; };
 		E173F10C2249BB76007FFC5C /* ClickMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickMode.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				E154EAF4224FF2EF004377B1 /* ArenaFactory.swift */,
 				E1825F97225FF7BD00946DA6 /* PlayerFactory.swift */,
+				E162FF5C22E4CEEC00851B30 /* LabelFactory.swift */,
 			);
 			path = EntityFactories;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				E1DE6384224837F500084717 /* GameController.swift in Sources */,
 				E1DE638E22483CAE00084717 /* GameLoadingScene.swift in Sources */,
 				E154EAF0224FEEE4004377B1 /* VisibleShapeComponent.swift in Sources */,
+				E162FF5D22E4CEEC00851B30 /* LabelFactory.swift in Sources */,
 				E1DE636E2248319A00084717 /* AppDelegate.swift in Sources */,
 				E1D708F222BC7B620062CE8A /* PlayPlayingState.swift in Sources */,
 				E173F10A2249B8E4007FFC5C /* ClickCheckSystem.swift in Sources */,

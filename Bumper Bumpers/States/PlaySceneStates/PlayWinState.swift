@@ -23,7 +23,7 @@ class PlayWinState: GKState, PlaySceneState {
   }
 
   func update(keyedInput: [UInt16], mousedInput: [ClickMode : [CGPoint]]) {
-    print("Made it to win state!")
-    print(lossTrackingSystem.findWinner())
+//    print("Made it to win state!")
+//    print(lossTrackingSystem.findWinner())
   }
 }
