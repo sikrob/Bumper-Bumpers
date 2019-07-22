@@ -51,9 +51,11 @@ class PlayScene: SKScene {
   }
 
   func setupWinStateEntities() -> [GKEntity] {
-    let mainMenuLabel = LabelFactory.createLabel(withText: "Main Menu", position: CGPoint(x: 0, y: 20), name: "MainMenu", visible: false, fontColor: .black)
+    let winLabel = LabelFactory.createLabel(withText: "", position: CGPoint(x: 0, y: 50), name: "WinLabel", visible: false, fontColor: .black)
+    let mainMenuLabel = LabelFactory.createLabel(withText: "Main Menu", position: CGPoint(x: 0, y: 20), name: "MainMenuLabel", visible: false, fontColor: .black)
+    let exitGameLabel = LabelFactory.createLabel(withText: "Exit", position: CGPoint(x: 0, y: -10), name: "ExitLabel", visible: false, fontColor: .black)
 
-    return [mainMenuLabel]
+    return [winLabel, mainMenuLabel, exitGameLabel]
   }
 
   func add(newEntity entity: GKEntity) {

@@ -18,6 +18,10 @@ class PlayWinState: GKState, PlaySceneState {
     super.init()
   }
 
+  override func didEnter(from previousState: GKState?) {
+    // grab win label and set text
+  }
+
   override func update(deltaTime seconds: TimeInterval) {
     update(keyedInput: [], mousedInput: [:])
   }

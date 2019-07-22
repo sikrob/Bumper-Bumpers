@@ -19,6 +19,7 @@ class PlayerFactory {
     playerShape.fillColor = color
     playerShape.position = startPosition
     playerShape.zPosition = 1.0
+
     let baseMovementAcceleration = 100
     let playerPhysicsBody = SKPhysicsBody.init(circleOfRadius: playerRadius)
     playerPhysicsBody.affectedByGravity = false
