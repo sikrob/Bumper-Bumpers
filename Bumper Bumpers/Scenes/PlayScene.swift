@@ -28,6 +28,17 @@ class PlayScene: SKScene {
 
     systems = [visibleShapeSystem, inputMovementSystem, lossTrackingSystem, clickCheckSystem] as! [GKComponentSystem<GKComponent>]
 
+    for entity in setupPlayStateEntities() + setupWinStateEntities() {
+      add(newEntity: entity)
+    }
+
+    let playPlayingState = PlayPlayingState(inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
+    let playWinState = PlayWinState(clickCheckSystem: clickCheckSystem, lossTrackingSystem: lossTrackingSystem)
+    self.stateMachine = PlaySceneStateMachine(states: [playPlayingState, playWinState])
+    self.stateMachine?.enter(PlayPlayingState.self)
+  }
+
+  func setupPlayStateEntities() -> [GKEntity] {
     let arena = ArenaFactory.createArena()
 
     // Ideally get these from user preferences:
@@ -36,16 +47,13 @@ class PlayScene: SKScene {
     let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary, arena: arena)
     let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary, arena: arena)
 
+    return [arena, player1, player2]
+  }
+
+  func setupWinStateEntities() -> [GKEntity] {
     let mainMenuLabel = LabelFactory.createLabel(withText: "Main Menu", position: CGPoint(x: 0, y: 20), name: "MainMenu", visible: false, fontColor: .black)
 
-    for entity in [arena, player1, player2, mainMenuLabel] {
-      add(newEntity: entity)
-    }
-
-    let playPlayingState = PlayPlayingState(inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
-    let playWinState = PlayWinState(clickCheckSystem: clickCheckSystem, lossTrackingSystem: lossTrackingSystem)
-    self.stateMachine = PlaySceneStateMachine(states: [playPlayingState, playWinState])
-    self.stateMachine?.enter(PlayPlayingState.self)
+    return [mainMenuLabel]
   }
 
   func add(newEntity entity: GKEntity) {
