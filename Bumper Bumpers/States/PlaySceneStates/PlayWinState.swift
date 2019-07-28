@@ -19,7 +19,13 @@ class PlayWinState: GKState, PlaySceneState {
   }
 
   override func didEnter(from previousState: GKState?) {
-    // grab win label and set text
+    for component in clickCheckSystem.components {
+      if component.clickableNode.name == "WinLabel", let labelNode = component.clickableNode as? SKLabelNode {
+        labelNode.text = "\(lossTrackingSystem.findWinner() as! String) Wins!"
+      }
+
+      component.clickableNode.run(SKAction.fadeIn(withDuration: 1.0))
+    }
   }
 
   override func update(deltaTime seconds: TimeInterval) {
@@ -27,7 +33,13 @@ class PlayWinState: GKState, PlaySceneState {
   }
 
   func update(keyedInput: [UInt16], mousedInput: [ClickMode : [CGPoint]]) {
-//    print("Made it to win state!")
-//    print(lossTrackingSystem.findWinner())
+//    clickCheckSystem.update(at: <#T##CGPoint#>, clickMode: <#T##ClickMode#>)
+
+//    for component in clickCheckSystem.components {
+//      if component.clickableNode.name == "ExitLabel" && component.clicking {
+//        print("exiting...")
+//        exit(0)
+//      }
+//    }
   }
 }
