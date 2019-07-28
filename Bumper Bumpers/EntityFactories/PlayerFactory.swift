@@ -20,7 +20,7 @@ class PlayerFactory {
     playerShape.position = startPosition
     playerShape.zPosition = 1.0
 
-    let baseMovementAcceleration = 100
+    let baseMovementAcceleration = 200
     let playerPhysicsBody = SKPhysicsBody.init(circleOfRadius: playerRadius)
     playerPhysicsBody.affectedByGravity = false
     playerShape.physicsBody = playerPhysicsBody
