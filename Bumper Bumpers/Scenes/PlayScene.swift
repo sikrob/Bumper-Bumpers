@@ -44,16 +44,16 @@ class PlayScene: SKScene {
     // Ideally get these from user preferences:
     let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"] // wasd
     let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"] // pl;'
-    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player1", color: .blue, actions: player1InputActionDictionary, arena: arena)
-    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player2", color: .green, actions: player2InputActionDictionary, arena: arena)
+    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player 1", color: .blue, actions: player1InputActionDictionary, arena: arena)
+    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player 2", color: .green, actions: player2InputActionDictionary, arena: arena)
 
     return [arena, player1, player2]
   }
 
   func setupWinStateEntities() -> [GKEntity] {
-    let winLabel = LabelFactory.createLabel(withText: "", position: CGPoint(x: 0, y: 50), name: "WinLabel", visible: false, fontColor: .black)
-    let mainMenuLabel = LabelFactory.createLabel(withText: "Main Menu", position: CGPoint(x: 0, y: 20), name: "MainMenuLabel", visible: false, fontColor: .black)
-    let exitGameLabel = LabelFactory.createLabel(withText: "Exit", position: CGPoint(x: 0, y: -10), name: "ExitLabel", visible: false, fontColor: .black)
+    let winLabel = LabelFactory.createLabel(withText: "", position: CGPoint(x: 0, y: 100), name: "WinLabel", visible: false, fontSize: 64, fontColor: .black)
+    let mainMenuLabel = LabelFactory.createLabel(withText: "Main Menu", position: CGPoint(x: 0, y: 20), name: "MainMenuLabel", visible: false, fontSize: 48, fontColor: .black)
+    let exitGameLabel = LabelFactory.createLabel(withText: "Exit", position: CGPoint(x: 0, y: -30), name: "ExitLabel", visible: false, fontSize: 48, fontColor: .black)
 
     return [winLabel, mainMenuLabel, exitGameLabel]
   }

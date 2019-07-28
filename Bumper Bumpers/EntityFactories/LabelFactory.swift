@@ -11,14 +11,14 @@ import GameplayKit
 import SpriteKit
 
 class LabelFactory  {
-  static func createLabel(withText text: String, position: CGPoint, name: String, visible: Bool, fontColor: NSColor) -> GKEntity {
+  static func createLabel(withText text: String, position: CGPoint, name: String, visible: Bool, fontSize: CGFloat, fontColor: NSColor) -> GKEntity {
     let label = GKEntity()
 
     let labelNode = SKLabelNode(text: text)
     labelNode.name = name
     labelNode.position = position
     labelNode.fontName = "Helvetica Neue UltraLight"
-    labelNode.fontSize = 48.0
+    labelNode.fontSize = fontSize
     labelNode.alpha = visible ? 1.0 : 0.0
     labelNode.zPosition = 10.0
     labelNode.fontColor = fontColor
