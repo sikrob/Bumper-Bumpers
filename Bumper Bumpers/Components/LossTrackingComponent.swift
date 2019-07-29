@@ -10,14 +10,14 @@ import GameplayKit
 import SpriteKit
 
 class LossTrackingComponent: GKComponent {
-  let targetShape: SKShapeNode
-  let targeterShape: SKShapeNode
+  let target: SKNode
+  let targeter: SKNode
   var loser: Bool
 
-  init(withTargetShape targetShape: SKShapeNode, targeterShape: SKShapeNode) {
-    self.targetShape = targetShape
-    self.targeterShape = targeterShape
-    self.loser = !targeterShape.intersects(targetShape)
+  init(withTarget target: SKNode, targeter: SKNode) {
+    self.target = target
+    self.targeter = targeter
+    self.loser = !targeter.intersects(target)
     super.init()
   }
 

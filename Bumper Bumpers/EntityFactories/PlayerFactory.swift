@@ -27,7 +27,7 @@ class PlayerFactory {
 
     player.addComponent(VisibleShapeComponent(withVisibleShape: playerShape))
     player.addComponent(InputMovementComponent(with: playerPhysicsBody, baseMovementAcceleration: baseMovementAcceleration, inputDirections: actions))
-    player.addComponent(LossTrackingComponent(withTargetShape: arena.component(ofType: VisibleShapeComponent.self)!.visibleShape, targeterShape: playerShape))
+    player.addComponent(LossTrackingComponent(withTarget: arena.component(ofType: VisibleShapeComponent.self)!.visibleShape, targeter: playerShape))
 
     return player
   }

@@ -15,13 +15,13 @@ class LossTrackingSystem: GKComponentSystem<LossTrackingComponent> {
 
   func update() {
     for component in components {
-      component.loser = !component.targeterShape.intersects(component.targetShape)
+      component.loser = !component.targeter.intersects(component.target)
     }
   }
 
   func findWinner() -> String? {
     if components.first(where: { $0.loser }) != nil {
-      return components.first(where: { !$0.loser })?.targeterShape.name
+      return components.first(where: { !$0.loser })?.targeter.name
     }
 
     return nil
