@@ -16,23 +16,32 @@ class MainMenuScene: SKScene {
 
   private var mainLogoSprite: SKSpriteNode?
   private var startLabel: SKLabelNode?
+  private var exitLabel: SKLabelNode?
   private var entities: [GKEntity] = []
   private var lastUpdateTime: TimeInterval = 0
 
   func runEntryAnimation() {
     mainLogoSprite?.run(SKAction.init(named: "LogoEntry")!,
                         completion: {() -> Void in
-                          self.startLabel?.run(SKAction.fadeAlpha(to: 1, duration: 0.5))
+                          self.startLabel?.run(SKAction.fadeIn(withDuration: 0.5))
+                          self.exitLabel?.run(SKAction.fadeIn(withDuration: 0.5))
     })
   }
 
   func handleMenuActions() {
     for entity in entities {
       if let clickableComponent = entity.component(ofType: ClickableComponent.self) {
-        if clickableComponent.clickableNode.name != nil &&
-          clickableComponent.clickableNode.name == "StartLabel" &&
-          clickableComponent.clicking {
-          state!.enterPlayState()
+        if clickableComponent.clicking {
+          switch clickableComponent.clickableNode.name {
+          case "StartLabel":
+            state!.enterPlayState()
+            break
+          case "ExitLabel":
+            NSApp.terminate(nil)
+            break
+          default:
+            break
+          }
         }
       }
     }
@@ -43,6 +52,8 @@ class MainMenuScene: SKScene {
     mainLogoSprite?.alpha = 0
     startLabel = self.childNode(withName: "StartLabel") as! SKLabelNode?
     startLabel?.alpha = 0
+    exitLabel = self.childNode(withName: "ExitLabel") as! SKLabelNode?
+    exitLabel?.alpha = 0
   }
 
   func initializeClickables() {
@@ -50,6 +61,11 @@ class MainMenuScene: SKScene {
       let startLabelEntity = GKEntity()
       startLabelEntity.addComponent(ClickableComponent(withClickableNode: startLabelNode, clickMode: .mouseUp))
       entities.append(startLabelEntity)
+    }
+    if let exitLabelNode = exitLabel {
+      let exitLabelEntity = GKEntity()
+      exitLabelEntity.addComponent(ClickableComponent(withClickableNode: exitLabelNode, clickMode: .mouseUp))
+      entities.append(exitLabelEntity)
     }
   }
 
