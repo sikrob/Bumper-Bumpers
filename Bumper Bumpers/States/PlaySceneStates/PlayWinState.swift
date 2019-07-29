@@ -41,7 +41,7 @@ class PlayWinState: GKState, PlaySceneState {
 
     for component in clickCheckSystem.components {
       if component.clickableNode.name == "ExitLabel" && component.clicking {
-        exit(0)
+        NSApp.terminate(self)
       }
     }
   }
