@@ -98,5 +98,7 @@ class PlayScene: SKScene {
     if let playSceneStateMachine = stateMachine {
       playSceneStateMachine.update(deltaTime: currentTime, scene: self)
     }
+
+    queuedMouseUps = []
   }
 }

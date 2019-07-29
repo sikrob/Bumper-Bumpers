@@ -34,15 +34,10 @@ class PlayWinState: GKState, PlaySceneState {
     update(keyedInput: [], mousedInput: [:])
   }
 
-  func update(keyedInput: [UInt16], mousedInput: [ClickMode : [CGPoint]]) {
-    for input in mousedInput {
-      for point in input.value {
-        clickCheckSystem.update(at: point, clickMode: input.key)
-      }
-    }
-
+  func handleMenuClicks() {
     for component in clickCheckSystem.components {
       if component.clicking {
+        component.clicking = false
         switch component.clickableNode.name {
         case "ExitLabel":
           NSApp.terminate(nil)
@@ -55,5 +50,15 @@ class PlayWinState: GKState, PlaySceneState {
         }
       }
     }
+  }
+
+  func update(keyedInput: [UInt16], mousedInput: [ClickMode : [CGPoint]]) {
+    for input in mousedInput {
+      for point in input.value {
+        clickCheckSystem.update(at: point, clickMode: input.key)
+      }
+    }
+
+    handleMenuClicks()
   }
 }
