@@ -23,6 +23,10 @@ class PlayScene: SKScene {
   private let lossTrackingSystem: LossTrackingSystem = LossTrackingSystem()
   private let clickCheckSystem: ClickCheckSystem = ClickCheckSystem()
 
+  func triggerGoToMainMenu() {
+    state!.enterMainMenuState()
+  }
+
   override func sceneDidLoad() {
     self.scaleMode = .aspectFill
 
@@ -33,7 +37,7 @@ class PlayScene: SKScene {
     }
 
     let playPlayingState = PlayPlayingState(inputMovementSystem: inputMovementSystem, lossTrackingSystem: lossTrackingSystem)
-    let playWinState = PlayWinState(clickCheckSystem: clickCheckSystem, lossTrackingSystem: lossTrackingSystem)
+    let playWinState = PlayWinState(clickCheckSystem: clickCheckSystem, lossTrackingSystem: lossTrackingSystem, mainMenuTransition: triggerGoToMainMenu)
     self.stateMachine = PlaySceneStateMachine(states: [playPlayingState, playWinState])
     self.stateMachine?.enter(PlayPlayingState.self)
   }

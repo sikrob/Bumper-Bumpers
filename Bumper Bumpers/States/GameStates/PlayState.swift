@@ -17,4 +17,10 @@ class PlayState: GKState {
       }
     }
   }
+
+  func enterMainMenuState() {
+    if let gameStateMachine = stateMachine as! GameStateMachine? {
+      gameStateMachine.enter(MainMenuState.self)
+    }
+  }
 }

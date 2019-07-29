@@ -11,10 +11,12 @@ import GameplayKit
 class PlayWinState: GKState, PlaySceneState {
   private let clickCheckSystem: ClickCheckSystem
   private let lossTrackingSystem: LossTrackingSystem
+  private let mainMenuTransition: () -> Void
 
-  init(clickCheckSystem: ClickCheckSystem, lossTrackingSystem: LossTrackingSystem) {
+  init(clickCheckSystem: ClickCheckSystem, lossTrackingSystem: LossTrackingSystem, mainMenuTransition: @escaping () -> Void) {
     self.clickCheckSystem = clickCheckSystem
     self.lossTrackingSystem = lossTrackingSystem
+    self.mainMenuTransition = mainMenuTransition
     super.init()
   }
 
@@ -40,8 +42,17 @@ class PlayWinState: GKState, PlaySceneState {
     }
 
     for component in clickCheckSystem.components {
-      if component.clickableNode.name == "ExitLabel" && component.clicking {
-        NSApp.terminate(self)
+      if component.clicking {
+        switch component.clickableNode.name {
+        case "ExitLabel":
+          NSApp.terminate(nil)
+          break
+        case "MainMenuLabel":
+          mainMenuTransition()
+          break
+        default:
+          break
+        }
       }
     }
   }
