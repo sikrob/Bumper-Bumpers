@@ -32,6 +32,7 @@ class MainMenuScene: SKScene {
     for entity in entities {
       if let clickableComponent = entity.component(ofType: ClickableComponent.self) {
         if clickableComponent.clicking {
+          clickableComponent.clicking = false
           switch clickableComponent.clickableNode.name {
           case "StartLabel":
             state!.enterPlayState()
