@@ -18,7 +18,6 @@ class PlayScene: SKScene {
 
   private var stateMachine: PlaySceneStateMachine?
 
-  private let visibleShapeSystem: VisibleShapeSystem = VisibleShapeSystem()
   private let inputMovementSystem: InputMovementSystem = InputMovementSystem()
   private let lossTrackingSystem: LossTrackingSystem = LossTrackingSystem()
   private let clickCheckSystem: ClickCheckSystem = ClickCheckSystem()
@@ -30,7 +29,7 @@ class PlayScene: SKScene {
   override func sceneDidLoad() {
     self.scaleMode = .aspectFill
 
-    systems = [visibleShapeSystem, inputMovementSystem, lossTrackingSystem, clickCheckSystem] as! [GKComponentSystem<GKComponent>]
+    systems = [inputMovementSystem, lossTrackingSystem, clickCheckSystem] as! [GKComponentSystem<GKComponent>]
 
     for entity in setupPlayStateEntities() + setupWinStateEntities() {
       add(newEntity: entity)
