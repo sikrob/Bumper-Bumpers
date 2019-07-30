@@ -26,8 +26,8 @@ class LossTrackingSystem_Tests: XCTestCase {
     targeterShapeA.name = "ShapeA"
     targeterShapeB = SKShapeNode(circleOfRadius: 10)
     targeterShapeB.name = "ShapeB"
-    lossTrackingComponentA = LossTrackingComponent(withTargetShape: targetShape, targeterShape: targeterShapeA)
-    lossTrackingComponentB = LossTrackingComponent(withTargetShape: targetShape, targeterShape: targeterShapeB)
+    lossTrackingComponentA = LossTrackingComponent(withTarget: targetShape, targeter: targeterShapeA)
+    lossTrackingComponentB = LossTrackingComponent(withTarget: targetShape, targeter: targeterShapeB)
     lossTrackingSystem = LossTrackingSystem()
     lossTrackingSystem.addComponent(lossTrackingComponentA)
     lossTrackingSystem.addComponent(lossTrackingComponentB)

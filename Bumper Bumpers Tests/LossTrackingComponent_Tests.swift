@@ -11,32 +11,32 @@ import SpriteKit
 @testable import Bumper_Bumpers
 
 class LossTrackingComponent_Tests: XCTestCase {
-  var targetShape: SKShapeNode!
-  var targeterShape: SKShapeNode!
+  var target: SKShapeNode!
+  var targeter: SKShapeNode!
 
   override func setUp() {
     super.setUp()
-    targetShape = SKShapeNode(circleOfRadius: 10)
-    targeterShape = SKShapeNode(circleOfRadius: 10)
+    target = SKShapeNode(circleOfRadius: 10)
+    targeter = SKShapeNode(circleOfRadius: 10)
   }
 
   override func tearDown() {
     super.tearDown()
-    targetShape = nil
-    targeterShape = nil
+    target = nil
+    targeter = nil
   }
 
   func testCanInitWithNonLoser() {
-    targetShape.position = CGPoint(x: 0, y: 0)
-    targeterShape.position = CGPoint(x: 0, y: 0)
-    let lossTrackingComponent = LossTrackingComponent(withTargetShape: targetShape, targeterShape: targeterShape)
+    target.position = CGPoint(x: 0, y: 0)
+    targeter.position = CGPoint(x: 0, y: 0)
+    let lossTrackingComponent = LossTrackingComponent(withTarget: target, targeter: targeter)
     XCTAssert(!lossTrackingComponent.loser)
   }
 
   func testCanInitWithLoser() {
-    targetShape.position = CGPoint(x: 0, y: 0)
-    targeterShape.position = CGPoint(x: 100, y: 0)
-    let lossTrackingComponent = LossTrackingComponent(withTargetShape: targetShape, targeterShape: targeterShape)
+    target.position = CGPoint(x: 0, y: 0)
+    targeter.position = CGPoint(x: 100, y: 0)
+    let lossTrackingComponent = LossTrackingComponent(withTarget: target, targeter: targeter)
     XCTAssert(lossTrackingComponent.loser)
   }
 }
