@@ -11,6 +11,8 @@ This project is up to date with XCode and Swift tech as of July 2019 and I belie
 Check out some snapshots of the action!
 
 ## The main menu:
+[[https://github.com/sikrob/Bumper-Bumpers/blob/master/README Assets/MainMenu.png|alt=Behold, the menu!]]
+
 ![alt text](https://raw.githubusercontent.com/sikrob/master/README%20Assets/MainMenu.png)
 
 ## A bumper battle in action:
