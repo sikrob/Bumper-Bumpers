@@ -25,7 +25,7 @@ class PlayerFactory {
     playerPhysicsBody.affectedByGravity = false
     playerSprite.physicsBody = playerPhysicsBody
 
-    player.addComponent(SpritesComponent(withSprites: [playerSprite]))
+    player.addComponent(SpriteComponent(withSprite: playerSprite))
     player.addComponent(InputMovementComponent(with: playerPhysicsBody, baseMovementAcceleration: baseMovementAcceleration, inputDirections: actions))
     player.addComponent(LossTrackingComponent(withTarget: arena.component(ofType: VisibleShapeComponent.self)!.visibleShape, targeter: playerSprite))
 

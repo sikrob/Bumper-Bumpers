@@ -70,8 +70,8 @@ class PlayScene: SKScene {
 
     if let visibleShapeComponent = entity.component(ofType: VisibleShapeComponent.self) {
       self.addChild(visibleShapeComponent.visibleShape)
-    } else if let spriteComponent = entity.component(ofType: SpritesComponent.self) {
-      self.addChild(spriteComponent.sprites[spriteComponent.currentSpriteIndex]) // there must be a better way to handle sprites...
+    } else if let spriteComponent = entity.component(ofType: SpriteComponent.self) {
+      self.addChild(spriteComponent.sprite)
     } else if let clickableComponent = entity.component(ofType: ClickableComponent.self) {
       self.addChild(clickableComponent.clickableNode)
     }

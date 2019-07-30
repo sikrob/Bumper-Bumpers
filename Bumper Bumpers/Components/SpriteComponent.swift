@@ -1,5 +1,5 @@
 //
-//  SpritesComponent
+//  SpriteComponent
 //  Bumper Bumpers
 //
 //  Created by Robert Sikorski on 7/29/19.
@@ -9,13 +9,11 @@
 import GameplayKit
 import SpriteKit
 
-class SpritesComponent: GKComponent {
-  let sprites: [SKSpriteNode]
-  var currentSpriteIndex: Int
+class SpriteComponent: GKComponent {
+  let sprite: SKSpriteNode
 
-  init(withSprites sprites: [SKSpriteNode]) {
-    self.sprites = sprites
-    self.currentSpriteIndex = sprites.count > 0 ? 0 : -1
+  init(withSprite sprite: SKSpriteNode) {
+    self.sprite = sprite
     super.init()
   }
 
