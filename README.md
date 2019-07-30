@@ -14,5 +14,5 @@ Check out some snapshots of the action!
 ![Main Menu](https://github.com/sikrob/Bumper-Bumpers/blob/master/README%20Assets/MainMenu.png)
 
 ## A bumper battle in action:
-![alt text](https://raw.githubusercontent.com/sikrob/master/README%20Assets/Bumper.png)
+![Bumper Battle](https://github.com/sikrob/Bumper-Bumpers/blob/master/README%20Assets/Bumper.png)
 
