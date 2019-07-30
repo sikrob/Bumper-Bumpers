@@ -47,8 +47,8 @@ class PlayScene: SKScene {
     // Ideally get these from user preferences:
     let player1InputActionDictionary:[UInt16:String] = [13: "UP", 0: "LEFT", 1: "DOWN", 2: "RIGHT"] // wasd
     let player2InputActionDictionary:[UInt16:String] = [35: "UP", 37: "LEFT", 41: "DOWN", 39: "RIGHT"] // pl;'
-    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), name: "Player 1", color: .blue, actions: player1InputActionDictionary, arena: arena)
-    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), name: "Player 2", color: .green, actions: player2InputActionDictionary, arena: arena)
+    let player1 = PlayerFactory.createPlayer(at: CGPoint(x: -150, y: 0), playerId: 1, color: .blue, actions: player1InputActionDictionary, arena: arena)
+    let player2 = PlayerFactory.createPlayer(at: CGPoint(x: 150, y: 0), playerId: 2, color: .green, actions: player2InputActionDictionary, arena: arena)
 
     return [arena, player1, player2]
   }
@@ -70,6 +70,8 @@ class PlayScene: SKScene {
 
     if let visibleShapeComponent = entity.component(ofType: VisibleShapeComponent.self) {
       self.addChild(visibleShapeComponent.visibleShape)
+    } else if let spriteComponent = entity.component(ofType: SpritesComponent.self) {
+      self.addChild(spriteComponent.sprites[spriteComponent.currentSpriteIndex]) // there must be a better way to handle sprites...
     } else if let clickableComponent = entity.component(ofType: ClickableComponent.self) {
       self.addChild(clickableComponent.clickableNode)
     }

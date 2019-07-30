@@ -10,24 +10,24 @@ import GameplayKit
 import SpriteKit
 
 class PlayerFactory {
-  static func createPlayer(at startPosition: CGPoint, name: String, color: NSColor, actions: Dictionary<UInt16, String>, arena: GKEntity) -> GKEntity {
+  static func createPlayer(at startPosition: CGPoint, playerId: Int, color: NSColor, actions: Dictionary<UInt16, String>, arena: GKEntity) -> GKEntity {
     let player = GKEntity()
 
     let playerRadius: CGFloat = 50
-    let playerShape: SKShapeNode = SKShapeNode(circleOfRadius: playerRadius)
-    playerShape.name = name
-    playerShape.fillColor = color
-    playerShape.position = startPosition
-    playerShape.zPosition = 1.0
+
+    let playerSprite: SKSpriteNode = SKSpriteNode(imageNamed: playerId == 1 ? "Player1.png" : "Player2.png")
+    playerSprite.name = playerId == 1 ? "Ameoblue" : "Amoered"
+    playerSprite.position = startPosition
+    playerSprite.zPosition = 1.0
 
     let baseMovementAcceleration = 200
     let playerPhysicsBody = SKPhysicsBody.init(circleOfRadius: playerRadius)
     playerPhysicsBody.affectedByGravity = false
-    playerShape.physicsBody = playerPhysicsBody
+    playerSprite.physicsBody = playerPhysicsBody
 
-    player.addComponent(VisibleShapeComponent(withVisibleShape: playerShape))
+    player.addComponent(SpritesComponent(withSprites: [playerSprite]))
     player.addComponent(InputMovementComponent(with: playerPhysicsBody, baseMovementAcceleration: baseMovementAcceleration, inputDirections: actions))
-    player.addComponent(LossTrackingComponent(withTarget: arena.component(ofType: VisibleShapeComponent.self)!.visibleShape, targeter: playerShape))
+    player.addComponent(LossTrackingComponent(withTarget: arena.component(ofType: VisibleShapeComponent.self)!.visibleShape, targeter: playerSprite))
 
     return player
   }
